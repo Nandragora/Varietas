@@ -8,7 +8,7 @@ function changeSlides(n) {
 function showSlides(n) {    
     let slides = document.getElementsByClassName("MySlide");
     let dots = document.getElementsByClassName("dot");
-    if (n >= slides.length) {slideindex = 0}
+    if (n >= slides.length) {slideindex = 0; n = 0}    
     if (n < 0) {slideindex = slides.length - 1;}
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
