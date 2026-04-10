@@ -20,3 +20,6 @@ function showSlides(n) {
     dots[slideindex].className += " active";
 }
 setInterval(() => changeSlides(1), 5000);
+function currentSlide(n) {
+    showSlides(slideindex = n - 1);
+}
