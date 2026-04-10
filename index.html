@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan Markup</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
 </head>
 
 <body>
@@ -12,7 +15,7 @@
         <div id="header">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Naik Logo" width="100">
             <ul id="Main-menu">
-                <li><a href="#">Home</a></li>
+                <li><a href="latihan markup.html">Home</a></li>
                 <li><a href="#">Products</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
@@ -20,35 +23,19 @@
                 <input type="text" name="search" placeholder="Search...">
             </form>
         </div>
-        <div class="slideshow-container">
-            <div class="MySlide fade">
-                <div class="number-text">1 / 3</div>
-                <img src="./slideshow.jpg" style="width: 100%;" alt="Slideshow Image 1">
-            </div>
-            <div class="MySlide fade">
-                <div class="number-text">2 / 3</div>
-                <img src="./slideshow2.png" style="width: 100%;" alt="Slideshow Image 2">
-            </div>
-            <div class="MySlide fade">
-                <div class="number-text">3 / 3</div>
-                <img src="./slideshow3.png" style="width: 100%;" alt="Slideshow Image 3">
-            </div>
-            <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlides(1)">&#10095;</a>
-            <div style="text-align: center;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-        </div>
+        <ul class="slider">
+            <li><img src="slideshow.jpg" alt="Slideshow Image 1"></li>
+            <li><img src="slideshow2.png" alt="Slideshow Image 2"></li>
+            <li><img src="slideshow3.png" alt="Slideshow Image 3"></li>
+        </ul>
         <div id="content-row">
             <div class="content">
                 <h1>Welcome to Naik</h1>
                 <p>Discover the latest in sportswear and footwear. Shop now for the best deals on Naik products.</p>
                 <img src="https://png.pngtree.com/png-clipart/20241210/original/pngtree-nike-shoes-transparent-png-image_17778783.png" alt="Naik Product" width="200">
-                <h1>Naik Flow</h1>
+                <h1>Naik    flow</h1>
                 <b>Views : 67.028.072 </b><b>purchased : 1.923</b>
-                <p>Naik Flow is a latest product from Naik designed to provide maximum comfort during workouts. With cutting-edge technology.</p>
+                <p>Naik flow is a latest product from Naik designed to provide maximum comfort during workouts. With cutting-edge technology.</p>
             </div>
             <div class="content">
                 <img src="https://png.pngtree.com/png-vector/20250129/ourmid/pngtree-trendy-nike-dunk-low-shoes-comfortable-top-sneakers-png-image_15363998.png" alt="Naik Product" width="200">
@@ -60,7 +47,7 @@
                 <img src="https://cdn.pixabay.com/photo/2024/03/19/20/44/ai-generated-8644121_640.png" alt="Naik Product" width="200">
                 <h1>Naik Earth</h1>
                 <b>Views : 30.123.456 </b><b>purchased : 523</b>
-                <p>Naik Earth is a running shoe designed to provide maximum speed and responsiveness. With advanced Zoom Air technology.</p>
+                <p>Naik Earth is a sustainable running shoe from Naik designed to provide maximum comfort and performance. With eco-friendly materials and innovative technology.</p>
             </div>
         </div>
         <div id="side-Bar">
@@ -83,7 +70,18 @@
             <p>&copy; 2024 Naik Corporation. All rights reserved.</p>
         </div>
     </div>
- <script src="script.js" ></script>
+
+<script>
+$(document).ready(function(){
+  $('.slider').bxSlider({
+    auto: true,
+    pause: 4000,
+    mode: 'fade',
+    captions: false
+  });
+});
+</script>
+
 </body>
 
 </html>
